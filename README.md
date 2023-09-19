@@ -73,6 +73,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
     - Create React App
     - Configure Tailwind
+    - Header
+    - Routing of App
+    - Login Form
+    - Sign Up Form
+    - Form validation
+    - UseRef Hook
+    - Firebase Setup
+    - Deploying our App to production
+    - Create SignUp User Account
+    - Implement Sign In User Api
+    - Create Redux Store with userSlice
 
 ### Features
 
@@ -86,7 +97,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Tailer in Background
     - Title and Description
   - Movie Suggestions
-    - Movie List * N
+    - Movie List \* N
 
 - NetflixGPT
   - Search Bar
