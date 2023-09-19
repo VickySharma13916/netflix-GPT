@@ -29,7 +29,7 @@ const Header = () => {
         <div className="flex items-center">
           <img
             src={`${
-              user
+              user.photoURL
                 ? user?.photoURL
                 : "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
             }`}
