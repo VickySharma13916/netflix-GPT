@@ -4,17 +4,16 @@ import {
   updateProfile,
 } from "firebase/auth";
 import React, { useRef, useState } from "react";
-import { auth } from "../utils/firebase";
-import { checkvalidate } from "../utils/validate";
-import { useNavigate } from "react-router-dom";
-import Header from "./Header";
-import { addUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
+import { auth } from "../utils/firebase";
+import { addUser } from "../utils/userSlice";
+import { checkvalidate } from "../utils/validate";
+import Header from "./Header";
+import { LOGO, USER_AVATAR } from "../utils/constant";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [message, setMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const email = useRef(null);
   const password = useRef(null);
@@ -47,12 +46,11 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: "Vicky Sharma",
-            photoURL: "https://avatars.githubusercontent.com/u/102846682?v=4",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = user;
               dispatch(addUser({ uid, email, displayName, photoURL }));
-              navigate("/browse");
             })
             .catch((err) => {
               setMessage(err.message);
@@ -74,7 +72,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -86,11 +83,7 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <img
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_small.jpg"
-        alt="netflix"
-        className="absolute z-0"
-      />
+      <img src={LOGO} alt="netflix" className="absolute z-0" />
       <div>
         <form className="absolute rounded z-10 w-1/3 left-1/3 my-36 bg-black bg-opacity-80 flex flex-col mx-auto p-16">
           <div className="text-white text-4xl font-semibold mb-4">
