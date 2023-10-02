@@ -10,6 +10,11 @@ const MainContainer = () => {
   const { original_title, title, overview, id } = mainMovie;
   return (
     <div className="relative">
+      {/* {
+        main Container
+        - video playback
+        - videoTitle
+      } */}
       <div className="absolute z-10 container mx-auto">
         <VideoTitle
           title={title}
@@ -17,7 +22,7 @@ const MainContainer = () => {
           original_title={original_title}
         />
       </div>
-      <div className="absolute z-0 w-full">
+      <div className="relative z-0 w-full">
         <VideoBackground id={id} title={title} />
       </div>
     </div>

@@ -7,18 +7,10 @@ import MainContainer from "./MainContainer";
 const Browse = () => {
   useNowPlayingMovie();
   return (
-    <div>
+    <div className="relative">
       <Header />
       <MainContainer />
       <SecodaryContainer />
-      {/* {
-        main Container
-        - video playback
-        - videoTitle
-        secondaryContainer
-        -MovieList * n
-          -Cards * n
-      } */}
     </div>
   );
 };

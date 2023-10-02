@@ -6,7 +6,6 @@ const VideoBackground = ({ id, title }) => {
   //Fetch trailer of the movie
   useFetchMovieTrailer(id);
   const trailerKey = useSelector((state) => state.movie?.trailerVideo);
-  console.log(trailerKey);
   return (
     <div className="my-4">
       <iframe
