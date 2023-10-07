@@ -7,7 +7,7 @@ const VideoBackground = ({ id, title }) => {
   useFetchMovieTrailer(id);
   const trailerKey = useSelector((state) => state.movie?.trailerVideo);
   return (
-    <div className="my-4">
+    <div className="pt-4">
       <iframe
         className="w-full aspect-video"
         src={`https://www.youtube.com/embed/${trailerKey?.key}?&autoplay=1&mute=1`}
