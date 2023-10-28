@@ -107,6 +107,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Add React-Slick Caousal NPM
     - Add the Tailwind CSS for better UI Design
     - Add the Different Custom hook for different kind of movie lists.
+    - Add GPT Search Feature
 
 ### Features
 
