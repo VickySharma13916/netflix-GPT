@@ -17,3 +17,9 @@ export const API_OPTIONS = {
 };
 
 export const IMAGE_CDN_URL = "https://image.tmdb.org/t/p/w780/";
+
+export const SUPPORT_LANGUAGE = [
+  { identifier: "en", name: "English" },
+  { identifier: "hn", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];

@@ -7,7 +7,7 @@ const gptSearchSlice = createSlice({
   },
   reducers: {
     toogleGptSearchView: (state) => {
-      return (state.gptSearch = !state.gptSearch);
+      state.gptSearch = !state.gptSearch;
     },
   },
 });

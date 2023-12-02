@@ -108,6 +108,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Add the Tailwind CSS for better UI Design
     - Add the Different Custom hook for different kind of movie lists.
     - Add GPT Search Feature
+    - Add GPT Search Page
+    - Add GPT Search Bar
+    - Add Multi-language Feature in GPT Search Page
+    - GPT Integrate API's (get openAI Key)
 
 ### Features
 
