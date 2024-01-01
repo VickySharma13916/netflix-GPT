@@ -97,7 +97,7 @@ const Login = () => {
             type="text"
             ref={fullName}
             placeholder="Full Name"
-            className="py-2 bg-gray-800 rounded text-white px-2 my-2"
+            className="py-2 md:w-full w-4/5 bg-gray-800 rounded text-white px-2 my-2"
           />
         )}
         {!isSignIn && (
@@ -105,20 +105,20 @@ const Login = () => {
             type="number"
             ref={phoneNumber}
             placeholder="Phone Number"
-            className="py-2 bg-gray-800 rounded text-white px-2 my-2"
+            className="py-2 bg-gray-800 md:w-full w-4/5 rounded text-white px-2 my-2"
           />
         )}
         <input
           type="email"
           ref={email}
           placeholder="Email Address"
-          className="py-2 bg-gray-800 rounded text-white px-2 my-2"
+          className="py-2 bg-gray-800 md:w-full w-4/5 rounded text-white px-2 my-2"
         />
         <input
           type="password"
           placeholder="Password"
           ref={password}
-          className="py-2 bg-gray-800 rounded text-white px-2 my-2"
+          className="py-2 bg-gray-800 md:w-full w-4/5 rounded text-white px-2 my-2"
         />
         <p className="text-red-600 text-sm">{message}</p>
         <button
