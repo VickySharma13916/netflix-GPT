@@ -83,54 +83,59 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <img src={LOGO} alt="netflix" className="absolute z-0" />
-      <div>
-        <form className="absolute rounded z-10 w-1/3 left-1/3 my-36 bg-black bg-opacity-80 flex flex-col mx-auto p-16">
-          <div className="text-white text-4xl font-semibold mb-4">
-            {isSignIn ? "Sign In" : "Sign Up"}
-          </div>
-          {!isSignIn && (
-            <input
-              type="text"
-              ref={fullName}
-              placeholder="Full Name"
-              className="py-2 bg-gray-800 rounded text-white px-2 my-2"
-            />
-          )}
-          {!isSignIn && (
-            <input
-              type="number"
-              ref={phoneNumber}
-              placeholder="Phone Number"
-              className="py-2 bg-gray-800 rounded text-white px-2 my-2"
-            />
-          )}
+      <img
+        src={LOGO}
+        alt="netflix"
+        className="fixed h-[100vh] w-[100vw] z-0 object-cover"
+      />
+      <form className="absolute justify-center items-center rounded z-10 w-full md:w-1/3 md:left-1/3 md:my-36 bg-black bg-opacity-80 flex flex-col mx-auto md:p-8 p-4">
+        <div className="text-white text-2xl md:text-4xl font-semibold mb-4">
+          {isSignIn ? "Sign In" : "Sign Up"}
+        </div>
+        {!isSignIn && (
           <input
-            type="email"
-            ref={email}
-            placeholder="Email Address"
+            type="text"
+            ref={fullName}
+            placeholder="Full Name"
             className="py-2 bg-gray-800 rounded text-white px-2 my-2"
           />
+        )}
+        {!isSignIn && (
           <input
-            type="password"
-            placeholder="Password"
-            ref={password}
+            type="number"
+            ref={phoneNumber}
+            placeholder="Phone Number"
             className="py-2 bg-gray-800 rounded text-white px-2 my-2"
           />
-          <p className="text-red-600 text-sm">{message}</p>
-          <button
-            className="text-white rounded bg-red-600 text-lg py-2 my-8"
-            onClick={(e) => handleButtonClick(e)}
-          >
-            {isSignIn ? "Sign In" : "Sign Up"}
-          </button>
-          <div className="text-white cursor-pointer" onClick={toogleSignInForm}>
-            {isSignIn
-              ? "New to Netflix? Sign Up Now"
-              : "Already Registered? Sign In"}
-          </div>
-        </form>
-      </div>
+        )}
+        <input
+          type="email"
+          ref={email}
+          placeholder="Email Address"
+          className="py-2 bg-gray-800 rounded text-white px-2 my-2"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          ref={password}
+          className="py-2 bg-gray-800 rounded text-white px-2 my-2"
+        />
+        <p className="text-red-600 text-sm">{message}</p>
+        <button
+          className="text-white rounded bg-red-600 text-lg p-2 my-4 md:my-8"
+          onClick={(e) => handleButtonClick(e)}
+        >
+          {isSignIn ? "Sign In" : "Sign Up"}
+        </button>
+        <div
+          className="text-white cursor-pointer text-sm"
+          onClick={toogleSignInForm}
+        >
+          {isSignIn
+            ? "New to Netflix? Sign Up Now"
+            : "Already Registered? Sign In"}
+        </div>
+      </form>
     </div>
   );
 };

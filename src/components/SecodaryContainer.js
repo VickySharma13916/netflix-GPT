@@ -5,7 +5,7 @@ import MovieList from "./MovieList";
 const SecodaryContainer = () => {
   const Movies = useSelector((state) => state.movie);
   return (
-    <div className="relative z-50 -mt-72">
+    <div className="relative z-50 md:-mt-72">
       {Movies && (
         <>
           <MovieList

@@ -3,7 +3,7 @@ import { IMAGE_CDN_URL } from "../utils/constant";
 
 const MovieCard = ({ data }) => {
   return (
-    <div className="relative flex flex-col">
+    <div className="relative flex flex-col justify-center">
       <img
         src={
           data?.poster_path

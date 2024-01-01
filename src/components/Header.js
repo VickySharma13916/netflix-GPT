@@ -48,10 +48,14 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value));
   };
   return (
-    <div className="px-8 absolute w-full flex justify-between z-50 py-2 bg-gradient-to-b from-black">
-      <img src={PHOTO_URL} alt="NetflixLogo" className="w-52" />
+    <div className="px-4 sm:px-8 md:absolute md:w-full md:flex md:justify-between md:z-50 md:py-2 md:bg-gradient-to-b md:from-black md:bg-transparent bg-blue-600">
+      <img
+        src={PHOTO_URL}
+        alt="NetflixLogo"
+        className="w-36 md:ml-0 md:mr-0 mr-auto ml-auto sm:w-52"
+      />
       {user && (
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap justify-center md:justify-start pb-4 md:pb-0 items-center gap-2">
           {language && (
             <select
               name="language"
