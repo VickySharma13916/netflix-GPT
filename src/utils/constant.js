@@ -23,3 +23,6 @@ export const SUPPORT_LANGUAGE = [
   { identifier: "hn", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const GPT_SECRET_KEYS =
+  "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";
